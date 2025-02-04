@@ -1,0 +1,31 @@
+{
+  "name": "tsject",
+  "private": true,
+  "version": "1.0.0",
+  "author": "Saulo Virissimo Alvarenga",
+  "license": "Apache-2.0",
+  "type": "module",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:tsject": "npm run lint -w tsject",
+    "test:tsject": "npm run test -w tsject",
+    "test-ui:tsject": "npm run test-ui -w tsject",
+    "build:tsject": "npm run build -w tsject"
+  },
+  "workspaces": [
+    "packages/tsject"
+  ],
+  "devDependencies": {
+    "@types/node": "20",
+    "@vitest/coverage-v8": "2.1.8",
+    "@vitest/ui": "2.1.8",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-prettier": "5.2.1",
+    "eslint": "9.10.0",
+    "prettier": "3.3.3",
+    "ts-node": "10.9.2",
+    "typescript-eslint": "8.3.0",
+    "typescript": "5.7.2",
+    "vitest": "2.1.8"
+  }
+}

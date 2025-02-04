@@ -1,0 +1,13 @@
+{
+  "name": "tsject",
+  "private": true,
+  "version": "0.0.0",
+  "author": "Saulo Virissimo Alvarenga",
+  "license": "Apache-2.0",
+  "scripts": {
+    "test": "vitest --reporter verbose --watch false",
+    "test-ui": "vitest --ui",
+    "build": "tsc --build --verbose tsconfig.build.json",
+    "lint": "eslint ."
+  }
+}
