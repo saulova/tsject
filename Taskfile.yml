@@ -1,0 +1,8 @@
+version: '3'
+
+tasks:
+  build-tsject:
+    cmds:
+      - npm run build:tsject
+      - node ./scripts/prepare-package-json.js ./packages/tsject/package.json ./packages/tsject/dist/package.json
+      - node ./scripts/normalize-version.js ./package.json ./packages/tsject/dist/package.json

@@ -1,0 +1,17 @@
+{
+  "dockerComposeFile": "docker-compose.yaml",
+  "service": "tsject-devcontainer",
+  "workspaceFolder": "/workspaces/tsject",
+  "remoteUser": "vscode",
+  "containerEnv": {
+    "SHELL": "/bin/bash"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint"
+      ]
+    }
+  }
+}

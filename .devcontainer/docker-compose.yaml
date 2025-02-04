@@ -1,0 +1,12 @@
+services:
+  tsject-devcontainer:
+    build: .
+    volumes:
+      - ../:/workspaces/tsject:cached
+    networks:
+      - tsject-devcontainer
+    user: vscode
+
+networks:
+  tsject-devcontainer:
+    driver: bridge
