@@ -4,20 +4,20 @@ import tsEslint from "typescript-eslint";
 import eslint from "@eslint/js";
 
 const tsRecommended = tsEslint
-  .config(eslint.configs.recommended, ...tsEslint.configs.recommended)
+  .config(
+    eslint.configs.recommended,
+    ...tsEslint.configs.recommended,
+    eslintConfigPrettier,
+    eslintPluginPrettierRecommended,
+  )
   .map((item) => {
     return {
       ...item,
-      files: [
-        "packages/cli/**/*.ts",
-        "packages/dependency-injection/**/*.ts",
-        "packages/dependency-injection-tsc-plugin/**/*.ts",
-      ],
+      files: ["packages/tsject/src/**/*.ts"],
+      rules: {
+        "@typescript-eslint/no-explicit-any": "off",
+      },
     };
   });
 
-export default [
-  ...tsRecommended,
-  eslintConfigPrettier,
-  eslintPluginPrettierRecommended,
-];
+export default [...tsRecommended];

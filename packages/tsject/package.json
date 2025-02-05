@@ -8,6 +8,7 @@
     "test": "vitest --reporter verbose --watch false",
     "test-ui": "vitest --ui",
     "build": "tsc --build --verbose tsconfig.build.json",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "clear": "rm -rf coverage && rm -rf dist && rm -f tsconfig.build.tsbuildinfo"
   }
 }
